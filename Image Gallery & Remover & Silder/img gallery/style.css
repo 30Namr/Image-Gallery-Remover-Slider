@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.fruits {
+    width: 100%;
+    height: 100vh;
+    background: ghostwhite;
+    padding: 10px 3%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fruits h1 {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    --webkit-text-fill-color: transparent;
+    --webkit-text-stroke: 2px black;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.fruits h1:hover {
+    --webkit-text-fill-color: black;
+    transform: translateY(-10px);
+}
+
+.img-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-image: url(background.webp);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 2s;
+}
+
+.fruits h1:nth-child(1):hover~.img-box {
+    background-image: url(cheery.jpg);
+}
+
+.fruits h1:nth-child(2):hover~.img-box {
+    background-image: url(watermelon.jpg);
+}
+
+.fruits h1:nth-child(3):hover~.img-box {
+    background-image: url(apple.webp);
+}
